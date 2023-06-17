@@ -5,11 +5,11 @@
 class Goji < Formula
   desc ""
   homepage "https://github.com/muandane/homebrew-gitmoji"
-  version "0.0.2-rc2"
+  version "0.0.2-rc3"
 
   on_macos do
-    url "https://github.com/muandane/goji/releases/download/v0.0.2-rc2/goji_0.0.2-rc2_darwin_all.tar.gz"
-    sha256 "c4d41c0367f93d0af398503873f326eb083c92cec761a958b441e56e613b1e48"
+    url "https://github.com/muandane/goji/releases/download/v0.0.2-rc3/goji_0.0.2-rc3_darwin_all.tar.gz"
+    sha256 "377802b63ba3f0743969c3bab32a32d7c230019e274904a063c584c3132e1096"
 
     def install
       bin.install "goji"
@@ -18,16 +18,16 @@ class Goji < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muandane/goji/releases/download/v0.0.2-rc2/goji_0.0.2-rc2_linux_arm64.tar.gz"
-      sha256 "f7cd2a69c16064d97b4a5255e543b38c3ab5b514cd12ba5f88adfa807b399730"
+      url "https://github.com/muandane/goji/releases/download/v0.0.2-rc3/goji_0.0.2-rc3_linux_arm64.tar.gz"
+      sha256 "2785670608d6e5f334884243ca796e30ac8513eb05c8b5da864f6559dd99541a"
 
       def install
         bin.install "goji"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/muandane/goji/releases/download/v0.0.2-rc2/goji_0.0.2-rc2_linux_amd64.tar.gz"
-      sha256 "63509456d2ec982a27cf2b009d6a8b5c70ab9289a69779558dabc4ab25a22995"
+      url "https://github.com/muandane/goji/releases/download/v0.0.2-rc3/goji_0.0.2-rc3_linux_amd64.tar.gz"
+      sha256 "21929dadb60a0cc13a543e3b33eeccc34b7267d5daa1148cb1facf1609c70f60"
 
       def install
         bin.install "goji"
