@@ -5,11 +5,11 @@
 class Azureprice < Formula
   desc ""
   homepage "https://github.com/muandane/homebrew-gitmoji"
-  version "0.0.1-rc1"
+  version "0.0.1-rc2"
 
   on_macos do
-    url "https://github.com/muandane/azureprice/releases/download/v0.0.1-rc1/azureprice_0.0.1-rc1_darwin_all.tar.gz"
-    sha256 "f3796884dc76c4dc49c4e280b7c05fb5e14273e876f57fdaf0a3b039fe20182c"
+    url "https://github.com/muandane/azureprice/releases/download/v0.0.1-rc2/azureprice_0.0.1-rc2_darwin_all.tar.gz"
+    sha256 "e86af3d33ac28bc0956eb29ab1044771acc51c0adc6020459d598641fd7f4690"
 
     def install
       bin.install "azureprice"
@@ -17,17 +17,17 @@ class Azureprice < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/muandane/azureprice/releases/download/v0.0.1-rc1/azureprice_0.0.1-rc1_linux_amd64.tar.gz"
-      sha256 "2888528cbe78fa5b236d7e1178911d4c7f72045c1d44b6649f8a05cfb3929f9c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/muandane/azureprice/releases/download/v0.0.1-rc2/azureprice_0.0.1-rc2_linux_arm64.tar.gz"
+      sha256 "4fd5c1d267ce3694df1a3e8e52aa36b4be5692ed947d2dae3904ee352eea80d9"
 
       def install
         bin.install "azureprice"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muandane/azureprice/releases/download/v0.0.1-rc1/azureprice_0.0.1-rc1_linux_arm64.tar.gz"
-      sha256 "34e1c44416536fe110c3ece83b5a137b88387665bfeecf9d8c15d44e27c7d10a"
+    if Hardware::CPU.intel?
+      url "https://github.com/muandane/azureprice/releases/download/v0.0.1-rc2/azureprice_0.0.1-rc2_linux_amd64.tar.gz"
+      sha256 "5ecd285103d731de4f39d3ed4cbb85280321922ec1bf01907491acb90359323f"
 
       def install
         bin.install "azureprice"
