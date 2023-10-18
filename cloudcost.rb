@@ -5,29 +5,29 @@
 class Cloudcost < Formula
   desc ""
   homepage "https://github.com/muandane/homebrew-gitmoji"
-  version "0.0.1-rc2-calc"
+  version "0.0.1-rc3"
 
   on_macos do
-    url "https://github.com/muandane/azureprice/releases/download/v0.0.1-rc2-calc/azureprice_0.0.1-rc2-calc_darwin_all.tar.gz"
-    sha256 "cd3ab3d5dea92a76a0a7456f30f2ac4af403d0c3e95f220d8d97cd0d8f623dd8"
+    url "https://github.com/muandane/cloudcost/releases/download/v0.0.1-rc3/cloudcost_0.0.1-rc3_darwin_all.tar.gz"
+    sha256 "50b07ca4177e34969dfd1b5d603719b09cd0f7752dfc1d6cb960202f2c1efe1f"
 
     def install
-      bin.install "azureprice"
+      bin.install "cloudcost"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muandane/azureprice/releases/download/v0.0.1-rc2-calc/azureprice_0.0.1-rc2-calc_linux_arm64.tar.gz"
-      sha256 "0e0a6323f87458b54e9f6b453190794e8c80d545ed1ad8e9cfaf90f4e9f6907d"
+      url "https://github.com/muandane/cloudcost/releases/download/v0.0.1-rc3/cloudcost_0.0.1-rc3_linux_arm64.tar.gz"
+      sha256 "33cdff30b6f05a4d10ddc2504f6158bf32b3ef1c3fe0c7b7d3cee68ddd903424"
 
       def install
         bin.install "cloudcost"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/muandane/azureprice/releases/download/v0.0.1-rc2-calc/azureprice_0.0.1-rc2-calc_linux_amd64.tar.gz"
-      sha256 "0d5cce8999f811848cfdc54bff755ee6cea04ce1fbf995f784aea6d673eed6f7"
+      url "https://github.com/muandane/cloudcost/releases/download/v0.0.1-rc3/cloudcost_0.0.1-rc3_linux_amd64.tar.gz"
+      sha256 "093a0d0ef03d9d6b5a1113ac8de594a558bdaba531a7707be54484656cf052db"
 
       def install
         bin.install "cloudcost"
